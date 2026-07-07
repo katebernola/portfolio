@@ -27,7 +27,9 @@ Minimal, modern design inspired by Stripe, Linear, and Intercom. Generous whites
 
 ### Color palette
 - White: #ffffff
-- Slate: #f8f9fa (light backgrounds), #64748b (medium text), #1e293b (dark text)
+- Slate: #f8f9fa (light backgrounds), #475569 (medium/muted text), #1e293b (dark text)
+- Diagram strokes and arrows: #64748b (passes 3:1 non-text contrast on #f8f9fa; too light for text on gray backgrounds — never use it for text)
+- Decorative borders: #e2e8f0 (exempt from contrast rules; never load-bearing)
 - Black: #000000
 - No color accents; use only neutral grays and black for hierarchy and emphasis
 
