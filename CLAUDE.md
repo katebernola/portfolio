@@ -17,46 +17,39 @@ Portfolio site for Kate Bernola (Dobbertin), content designer. Single static HTM
 
 ## Visual system
 
-- Progressive disclosure is the primary tool for managing cognitive load and page weight. Default to collapsed/expandable sections over long flat pages. Still open to exploring the best grouping and number of examples per section.
-- Images use a shared lo-fi look: rounded corners, and any text that isn't the direct point of the image renders as a gray placeholder bar (loading-skeleton style) rather than real words.
-- Each image may use exactly one bright, friendly highlight color — think highlighter pens, softened rather than harsh (pink, yellow, cyan, light neon green, violet, orange). Highlight colors must coordinate with each other and with the site's main accent color. Adjust the main accent if a new highlight color needs it to stay coordinated.
-- Design should stay clean and out of the way — content and visuals do the work, chrome doesn't compete with them.
+Minimal, modern design inspired by Stripe, Linear, and Intercom. Generous whitespace, strong typographic rhythm, no ornamentation.
 
-## Image style specification
+### Spacing scale
+- 4px, 8px, 16px, 24px, 32px (all spacing and padding uses this scale)
+
+### Grid
+- 12-column grid at max-width 960px
+
+### Color palette
+- White: #ffffff
+- Slate: #f8f9fa (light backgrounds), #64748b (medium text), #1e293b (dark text)
+- Black: #000000
+- No color accents; use only neutral grays and black for hierarchy and emphasis
 
 ### Typography
-- Font: Calibri, Candara, sans-serif.
+- Font: Inter or IBM Plex Sans (fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif)
+- H1: 48px, weight 700, line-height 1.2
+- H2: 32px, weight 700, line-height 1.3
+- H3: 24px, weight 600, line-height 1.3
+- Body: 18px, weight 400, line-height 1.6
+- Small: 16px, weight 400, line-height 1.5
 
-### Strokes and corners
-- Stroke weight: 2px for all UI elements (cards, buttons, input fields, boxes).
-- Corner radius: 8px for all shapes. Use rounded joins and line caps.
-- All shapes are geometric—no hand-drawn wobble or irregularity.
-- Input fields: fill with white (#ffffff). Everything else uses paper (#fafaf8).
+### Visual constraints
+- No gradients
+- No drop shadows
+- No rounded corners above 8px (use 0–4px for cards and inputs, or none)
+- Strokes: 1px, neutral gray (#e2e8f0)
+- Whitespace is the primary design tool
 
-### Highlight colors (one per image)
-Pick exactly one color per image to highlight key elements. Kate will specify which element(s) to highlight when requesting the image; ask if unsure.
-
-- Pink: #f472b6
-- Yellow: #fde047
-- Cyan: #22d3ee
-- Green: #4ade80
-- Violet: #d946ef
-
-### Base palette
-- Accent: #6b3fa0 (site accent)
-- Ink: #1a1a1a (text, strokes)
-- Paper: #fafaf8 (backgrounds)
-- White: #ffffff (input fields)
-- Skeleton: #e3e0da (placeholder bars)
-- Muted: #6b6660 (secondary labels)
-
-### Text rendering
-- Render as real words: only what Kate specifies when requesting the image. Ask for clarification if the request is ambiguous about what text should be real.
-- Everything else: render as gray placeholder bars. Bar height: 6–8px. Bar width: varies by context. Rounded endpoints (rx=3).
-
-### How to highlight
-- Fill the element with the highlight color. Ink (#1a1a1a) text on all highlight colors — every one of the five is too light for white text to meet WCAG 4.5:1 (white lands between 1.9:1 and 3.5:1 depending on the color; ink passes 5:1+ on all of them).
-- No additional stroke, shadow, or glow.
+### Diagrams and images
+- Use only: clean lines, minimal shapes, neutral colors (black, gray, white)
+- No illustrations, highlights, or decorative elements
+- If showing workflow/process, use simple boxes, lines, and labels only
 
 ## Accessibility
 
