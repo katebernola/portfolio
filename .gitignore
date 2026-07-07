@@ -1,0 +1,5 @@
+# Personal / working files that should never go to the public repo
+*.txt
+*.csv
+next-steps-printable.html
+next-steps-tracker.html

@@ -116,6 +116,49 @@
     margin-top: 16px;
   }
 
+  .equation {
+    border: 1px solid #e2e8f0;
+    background: #f8f9fa;
+    padding: 24px 32px;
+    margin: 24px 0 32px;
+  }
+
+  .eq-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 16px;
+    padding: 8px 0;
+  }
+
+  .eq-expr {
+    font-size: 18px;
+    color: #64748b;
+  }
+
+  .eq-result {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    white-space: nowrap;
+  }
+
+  .eq-total {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 8px;
+    padding-top: 16px;
+  }
+
+  .eq-total .eq-expr {
+    color: #1e293b;
+    font-weight: 600;
+  }
+
+  .eq-total .eq-result {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
   .criteria-box {
     border: 1px solid #e2e8f0;
     padding: 32px;
@@ -163,16 +206,53 @@
     <p>Before you can scale, you need to know what's worth scaling. I analyzed what the team was producing and found a pattern: significant work producing minimal value.</p>
 
     <h3>Help Center articles</h3>
-    <p>Six hours for content designers plus reviewers to produce one article. Cost: $960. A view prevents a contact maybe 5% of the time, worth $24. Break-even: 800 views.</p>
-    <p>Looking at actual usage, two-thirds of articles never hit that number. We stopped making them and redirected the team.</p>
+    <div class="equation">
+      <div class="eq-row">
+        <span class="eq-expr">8 hours to create and review × $120 per resource-hour</span>
+        <span class="eq-result">$960 per article</span>
+      </div>
+      <div class="eq-row">
+        <span class="eq-expr">$24 per contact avoided × 5% chance a view prevents one</span>
+        <span class="eq-result">$1.20 max value per view</span>
+      </div>
+      <div class="eq-row eq-total">
+        <span class="eq-expr">$960 ÷ $1.20</span>
+        <span class="eq-result">800 views to break even</span>
+      </div>
+    </div>
+    <p>Looking at actual usage, two-thirds of our articles never came close. We shifted intake from request-based to demand-based and redirected the team.</p>
 
     <h3>Help Center videos</h3>
-    <p>Videos cost three times as much. Only 13 of 300+ videos we'd made were worth their production cost. We eliminated them entirely.</p>
+    <div class="equation">
+      <div class="eq-row">
+        <span class="eq-expr">At least 24 hours to make, review, and publish × $120 per resource-hour</span>
+        <span class="eq-result">$2,880+ per video</span>
+      </div>
+      <div class="eq-row">
+        <span class="eq-expr">Max value per view</span>
+        <span class="eq-result">$1.20</span>
+      </div>
+      <div class="eq-row eq-total">
+        <span class="eq-expr">$2,880 ÷ $1.20</span>
+        <span class="eq-result">2,400 views to break even</span>
+      </div>
+    </div>
+    <p>By that bar, we dropped support for more than 200 videos. Only 15 earned their place.</p>
 
     <h3>Demo videos</h3>
-    <p>We created a template and handed ongoing production to marketing. Lower-cost team, same output quality.</p>
+    <div class="equation">
+      <div class="eq-row">
+        <span class="eq-expr">UX multimedia designer</span>
+        <span class="eq-result">$100 per hour</span>
+      </div>
+      <div class="eq-row">
+        <span class="eq-expr">Marketing multimedia designer</span>
+        <span class="eq-result">$80 per hour</span>
+      </div>
+    </div>
+    <p>Sometimes you just need a cost comparison. This work started with marketing and moved to UX during a capacity crunch. We improved the overall design first (bumpers, a template, guidelines), then handed production back. The template made the work easy to do well at the lower rate.</p>
 
-    <p><strong>Principle:</strong> Show the math. When leaders see that two-thirds of your output produces no value, eliminating it becomes obvious.</p>
+    <p><strong>Principle:</strong> Show the math. When leaders see that two-thirds of your output costs more than it returns, stopping becomes the obvious call.</p>
   </section>
 
   <section>
@@ -180,8 +260,16 @@
     <p>Freeing people up doesn't require new headcount. Point them at work where you know they'll make a difference.</p>
 
     <h3>Retirement: a pair of projects</h3>
-    <p>Investment rebalancing had failed three rounds of usability testing. The design wasn't the problem—nobody understood what was happening. I assigned Dustin (content designer) one week before the next test. He researched, rewrote, and the test passed with measurable qualitative improvement.</p>
-    <p>That win bought credibility. Dustin got a second project: the retirement income estimator. He unified two text-heavy screens into one with a simple chart, handled scenarios with contextual responses, and made inputs editable inline. The work was obvious value. Retirement became his full-time assignment.</p>
+    <p>Investment rebalancing had failed three rounds of usability testing. The design itself wasn't the problem: nobody understood what was happening. Rebalancing is complicated for an everyday 401(k) user with no retirement background. That made it the perfect testing ground:</p>
+    <ul>
+      <li>Research showed content actually was the problem</li>
+      <li>Without the right content the project would fail; with it, success was clear</li>
+      <li>Product agreed the problem was big, and committed to structural changes if the content designer found the need</li>
+    </ul>
+    <p>I assigned one of my content designers, with the next usability test a week away. He dove in, did the research to understand the content deeply, and reworked the design with the product designer. It worked, and we had measured qualitative data showing the impact.</p>
+    <p>But this looked a little too much like "bring us in at the last minute, and we'll fix everything for you." So I made a bargain: if he took this one, he also got a project that was early in development.</p>
+    <p>He picked up the retirement income estimator. He united two text-heavy screens into one. He replaced a wall of words with a simple chart that made the point better. He wrote a response for each scenario, from way too little saved to way too much. He pushed for a way to include funds from other accounts or from a partner, and made the case for inputs you could edit right on the results screen, no edit button needed.</p>
+    <p>What he really did was reorder the workflow to match how users think. The value was obvious, and the retirement space was hooked. He became their full-time content designer.</p>
 
     <p><strong>Principle:</strong> Find sure-fire wins. Avoid last-minute patches. Aim for "essential to success," not "superhero work."</p>
   </section>
@@ -219,11 +307,10 @@
     <h2>Outcomes</h2>
     <div class="impact-list">
       <ul>
-        <li>Eliminated redundant work and redirected the team toward high-value projects</li>
-        <li>Built leadership credibility through visible wins</li>
-        <li>Established repeatable standards that reduced decision-making load by 40%</li>
-        <li>Grew the practice from one designer to a structured team with clear role definitions</li>
-        <li>Left the organization with permanent capability increase</li>
+        <li>Stopped work that cost more than it returned, and redirected the team to high-value projects</li>
+        <li>Built leadership credibility through visible wins; demand for content design grew across product teams</li>
+        <li>Established standards, templates, and tools that let partners get what they need without waiting on a specialist</li>
+        <li>Left the organization permanently more capable</li>
       </ul>
     </div>
   </section>
