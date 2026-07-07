@@ -24,6 +24,9 @@ Portfolio site for Kate Bernola (Dobbertin), content designer. Single static HTM
 
 ## Image style specification
 
+### Typography
+- Font: Calibri, Candara, sans-serif.
+
 ### Strokes and corners
 - Stroke weight: 2px for all UI elements (cards, buttons, input fields, boxes).
 - Corner radius: 8px for all shapes. Use rounded joins and line caps.
@@ -40,7 +43,7 @@ Pick exactly one color per image to highlight key elements. Kate will specify wh
 - Violet: #d946ef
 
 ### Base palette
-- Accent: #a21caf (site accent — darker cut of the highlight violet family, WCAG-safe on paper and under white text)
+- Accent: #6b3fa0 (site accent)
 - Ink: #1a1a1a (text, strokes)
 - Paper: #fafaf8 (backgrounds)
 - White: #ffffff (input fields)
