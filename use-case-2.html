@@ -249,15 +249,20 @@
 
   <section>
     <h2>The problem</h2>
-    <p>Product owners submitted messaging requests to marketing and UX separately. Each group used their own criteria to assess. UX had no authority to decline. Result: redundant messages across channels, client confusion over what's actually important, and constant escalations.</p>
+    <p>Product owners submitted messaging requests to marketing and UX separately. The two teams were tightly aligned and usually reached the same answer. The waste was everything around the answer: each team ran its own discovery and its own rounds of back and forth. UX had no authority to say no, so its loop was the longest. The result: duplicated effort, redundant messages across channels, and client confusion over what's actually important.</p>
+  </section>
+
+  <section>
+    <h2>My role</h2>
+    <p>I made the entire thing happen. The trade I had to sell: a little more work for marketing, a lot less for UX, and one answer for product owners. Worth it for everyone, but asking a partner team to take on more work is never a small ask.</p>
   </section>
 
   <section>
     <h2>Old workflow: two parallel requests</h2>
-    <p>The same event triggered two requests, two discoveries, and two assessments that didn't always agree.</p>
+    <p>The same event triggered two requests, two discoveries, and two nearly identical assessments. The waste wasn't disagreement. It was duplication, and UX carried the worst of it.</p>
 
     <div class="visual-figure">
-      <svg viewBox="0 0 640 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Old workflow flowchart with two parallel paths. Left path: PO submits marketing comms request, comms team discovery, comms team assessment, response with a marketing comms plan. 70% end OK, 30% push back and a marketing exec makes the call. Right path: PO submits UX request, UX discovery, UX assessment, response of no or where. 10% end OK, 90% push back and an exec makes the call. Footnote: UX did not have the authority to say no." font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <svg viewBox="0 0 640 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Old workflow flowchart with two parallel paths. Left path: PO submits marketing comms request, comms team discovery, comms team assessment, response with a marketing comms plan. 70% end OK, 30% push back and a marketing exec makes the call. Right path: PO submits UX request, UX discovery, UX assessment, response of no or where. 10% end OK, 90% push back. Pushback frequently loops back to UX discovery for rework. When escalation is needed, UX leadership escalates and product leadership decides. Footnotes: UX did not have the authority to say no; only product leadership's answer was respected." font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
         <defs>
           <marker id="arrow-old" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0 0 L10 5 L0 10 z" fill="#64748b"/>
@@ -334,12 +339,17 @@
         <text x="540" y="473" text-anchor="middle" font-size="14" fill="#1e293b">Pushback</text>
 
         <line x1="540" y1="492" x2="540" y2="536" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-old)"/>
-        <rect x="430" y="540" width="200" height="56" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
-        <text x="530" y="563" text-anchor="middle" font-size="14" fill="#1e293b">Exec makes</text>
-        <text x="530" y="581" text-anchor="middle" font-size="14" fill="#1e293b">the call</text>
+        <rect x="410" y="540" width="220" height="56" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
+        <text x="520" y="563" text-anchor="middle" font-size="14" fill="#1e293b">UX leadership escalates;</text>
+        <text x="520" y="581" text-anchor="middle" font-size="14" fill="#1e293b">product leadership decides**</text>
 
-        <!-- Footnote -->
-        <text x="380" y="644" font-size="13" fill="#475569">* UX did not have the authority to say no</text>
+        <!-- Iteration loop: pushback returns to UX discovery -->
+        <path d="M590 452 H614 V148 H584" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-old)"/>
+        <text x="606" y="310" font-size="12" fill="#475569" text-anchor="middle" transform="rotate(-90 606 310)">frequent rework loop</text>
+
+        <!-- Footnotes -->
+        <text x="60" y="640" font-size="13" fill="#475569">* UX did not have the authority to say no</text>
+        <text x="60" y="662" font-size="13" fill="#475569">** Only product leadership's answer was respected</text>
       </svg>
     </div>
   </section>
