@@ -10,21 +10,17 @@ Kate to review (built 2026-07-08):
 3. Value-vs-disruption 2x2 in use-case-2
 
 Kate to supply or decide:
-4. Context line for use-case-2 (employer/dates/team size — what's public?)
-5. "My role" + conflict story for use-case-2 (who resisted single intake?)
 6. Lessons-learned line for use-case-1
 7. Lessons-learned line for use-case-2
 8. Resolve use-case-1 overview claim ("tested across multimedia and product design" — cut it or back it up)
-9. Homepage intro hierarchy decision (recommendation: demote the arrow line to a small muted kicker)
-10. Confirm hired-designer numbers reconcile (9 from scratch vs 11 of 12 hired)
 11. Help Center intake criteria (for the "what earns an article" checklist artifact)
 
 Claude to do:
 12. og-image PNG + og:image tags (needs Kate's go-ahead to run the image-generation script)
-13. Full WCAG pass (keyboard focus on stat rows, focus order, zoom, SVG alt text)
+13. Full WCAG pass (keyboard focus on stat rows done; focus order, zoom, SVG alt text remain)
 14. Final proofread of all three pages (last in the chain)
 
-Done: mobile media queries, favicon + social meta tags, case study footers, hover indicators, old-workflow percentages confirmed. URL resolved: repo renamed to katebernola.github.io, site live at https://katebernola.github.io/ — this is the link for the resume and LinkedIn.
+Done: mobile media queries, favicon + social meta tags, case study footers, hover indicators, percentages confirmed, URL resolved (site live at https://katebernola.github.io/), use-case-2 context line ("Paychex UX in partnership with marketing, 2026"), use-case-2 my-role section + corrected duplication story + rework loop in diagram, homepage intro resolved (arrow line cut), hired-designer numbers reconciled in Kate's stat rewrite, contact top bar + resume CTA button, accordion stats.
 
 ## Post-MVP (prioritized; tracker tasks 15–24)
 
