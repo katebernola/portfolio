@@ -399,6 +399,38 @@
     margin-bottom: 0;
   }
 
+  .step {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 40px;
+  }
+
+  .step-head {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .step-ghost {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 0.85;
+    color: #e2e8f0;
+    margin: 0;
+    user-select: none;
+  }
+
+  .step-head h2 {
+    margin: 0 0 4px;
+  }
+
+  .step-hook {
+    font-size: 16px;
+    color: #475569;
+    margin: 0;
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -492,8 +524,16 @@
     </div>
   </section>
 
-<section id="step-1">
-    <h2>Step 1: Eliminate low-value work</h2>
+<section id="step-1" class="step">
+    <div class="step-head">
+      <p class="step-ghost" aria-hidden="true">1</p>
+      <div>
+        <h2><span class="sr-only">Step 1: </span>Identify what doesn't add value</h2>
+        <p class="step-hook">Do the math. Stop the work.</p>
+      </div>
+    </div>
+
+    <h3>The move</h3>
     <p>Every team has some grunt work. My team had all grunt work. Middle-school math proved it didn't make cents.</p>
 
     <div class="case-study">
@@ -569,17 +609,39 @@
     <p><strong>Principle:</strong> Show the math. When two-thirds of your output costs more than it returns, stopping is the obvious call.</p>
   </section>
 
-  <section id="step-2">
-    <h2>Step 2: Show value</h2>
-    <p>So people are bored. Now what?</p>
-    <p>Look for projects where the need is so obvious, your guy is basically a kindergarten teacher with a room of 10-year-olds. One of mine rescued a 401(k) rebalancing flow that had failed three rounds of usability testing, then rebuilt the retirement income estimator around how users think. Retirement made him their full-time content designer.</p>
-    <p>Sometimes the win is proving the problem isn't content. A payroll team asked for "content support" on a workflow nobody could explain. I mapped the IA and showed the real issue was system design.</p>
+  <section id="step-2" class="step">
+    <div class="step-head">
+      <p class="step-ghost" aria-hidden="true">2</p>
+      <div>
+        <h2><span class="sr-only">Step 2: </span>Find surefire wins</h2>
+        <p class="step-hook">Let your people shine. Fuel demand.</p>
+      </div>
+    </div>
+
+    <h3>The move</h3>
+    <p>So people are bored. Now what? Find projects where the need is so obvious, your guy is basically a kindergarten teacher with a room of 10-year-olds.</p>
+
+    <h3>How it played out</h3>
+    <ul>
+      <li>One designer rescued a 401(k) rebalancing flow that had failed three rounds of usability testing.</li>
+      <li>Then he rebuilt the retirement income estimator around how users think. Retirement made him their full-time content designer.</li>
+      <li>A payroll team asked for "content support" on a workflow nobody could explain. I mapped the IA and proved the real issue was system design.</li>
+    </ul>
+
     <p><strong>Principle:</strong> Find sure-fire wins. No last-minute patches. "Essential to success," not "superhero work."</p>
   </section>
 
-  <section id="step-3">
-    <h2>Step 3: Scale value</h2>
-    <p>Now invest in systems: standards written for product designers, reusable content, templates, decision maps, clear intake. One expert multiplies.</p>
+  <section id="step-3" class="step">
+    <div class="step-head">
+      <p class="step-ghost" aria-hidden="true">3</p>
+      <div>
+        <h2><span class="sr-only">Step 3: </span>Make great work repeatable</h2>
+        <p class="step-hook">Build tools and frameworks. Multiply impact.</p>
+      </div>
+    </div>
+
+    <h3>The move</h3>
+    <p>Invest in systems: standards written for product designers, reusable content, templates, decision maps, clear intake. One expert multiplies.</p>
 
     <div class="case-study">
     <p class="cs-tag">Case study</p>
@@ -591,11 +653,26 @@
     <p><strong>Principle:</strong> Don't build everything at once. Standards cut decisions; fewer decisions, faster output.</p>
   </section>
 
-  <section id="step-4">
-    <h2>Step 4: Change the culture</h2>
+  <section id="step-4" class="step">
+    <div class="step-head">
+      <p class="step-ghost" aria-hidden="true">4</p>
+      <div>
+        <h2><span class="sr-only">Step 4: </span>Create the new normal</h2>
+        <p class="step-hook">Persist and be patient. Then get out of the way.</p>
+      </div>
+    </div>
+
+    <h3>The move</h3>
     <p>Step 3 is the most work. This one is the hardest. You need permission, credibility, and consistency.</p>
-    <p>Every audience got its own plan. Designers: a shared goal, weekly 1:1s, team rituals. Leaders: the plan tied to department and personal goals. All of UX: the vision, the early wins, the path. Partners: relationships first, announcements second.</p>
-    <p>In the end, content designers embedded into each product team, connected by a community of practice. There were tears, but it was the right move.</p>
+
+    <h3>How it played out</h3>
+    <ul>
+      <li>Designers: a shared goal, weekly 1:1s, team rituals.</li>
+      <li>Leaders: the plan tied to department and personal goals.</li>
+      <li>All of UX: the vision, the early wins, the path.</li>
+      <li>Partners: relationships first, announcements second.</li>
+      <li>The end state: content designers embedded in every product team, connected by a community of practice. There were tears, but it was the right move.</li>
+    </ul>
   </section>
 
   <section>
