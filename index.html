@@ -52,6 +52,14 @@
     margin: 0 0 16px;
   }
 
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 24px 0 16px;
+    color: #1e293b;
+  }
+
   p {
     font-size: 18px;
     line-height: 1.6;
@@ -169,6 +177,7 @@
     padding: 16px;
     text-decoration: none;
     transition: border-color 0.2s;
+    max-width: 292px;
   }
 
   .step-card:hover {
@@ -326,15 +335,15 @@
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
-    color: #15803d;
-    border: 1px solid #15803d;
+    color: #6B4C9A;
+    border: 1px solid #6B4C9A;
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0 0 8px;
   }
 
   .case-study {
-    border: 1px solid #15803d;
+    border: 1px solid #6B4C9A;
     border-radius: 4px;
     padding: 24px;
     margin: 32px 0;
@@ -347,7 +356,7 @@
   .cs-label {
     font-size: 16px;
     font-weight: 600;
-    color: #15803d;
+    color: #6B4C9A;
     margin: 24px 0 8px;
   }
 
@@ -361,8 +370,8 @@
     display: inline-block;
     font-size: 13px;
     font-weight: 600;
-    color: #15803d;
-    border: 1px solid #15803d;
+    color: #6B4C9A;
+    border: 1px solid #6B4C9A;
     border-radius: 4px;
     padding: 1px 8px;
     margin: 12px 0 0;
@@ -672,9 +681,58 @@
 
     <div class="case-study">
     <p class="cs-tag">Case study</p>
-    <h3>An AI writing assistant</h3>
-    <p>Built on our own content standards. Type in rough text, and it returns a UI-ready version.</p>
-    <p class="visual-caption">Full case study in progress.</p>
+    <h3>AI Content Design Coach</h3>
+    <p>Scaling Content Design expertise across the organization.</p>
+
+    <h4>We couldn't hire more Content Designers.</h4>
+    <p>Instead, I helped make their expertise available to everyone.</p>
+    <p>When our product footprint nearly doubled, the obvious solution was adding people. We couldn't. At the same time, several Content Designers had grown into new roles across UX, leaving a smaller Content Design practice to support a much larger organization. The result: the Content Design practice was spending too much time rewriting repeatable UI copy instead of helping shape products and designing the next generation of AI-ready systems.</p>
+    <p>The goal wasn't to replace Content Design. It was to reserve Content Design expertise for work that required it.</p>
+
+    <h4>The challenge</h4>
+    <p>Years of Content Design expertise existed. Almost none of it scaled.</p>
+    <p>More than 120 pages of standards covered voice and tone, communication strategy, reusable patterns, component guidance, accessibility, and product messaging. New Content Designers took months to become fluent. Product designers, researchers, Product Ops, and Marketing couldn't realistically learn it all. Yet all of them created product content.</p>
+    <p>The bottleneck wasn't writing. The bottleneck was access to expertise.</p>
+
+    <h4>The strategy</h4>
+    <p>AI was part of the solution, but it wasn't <em>the</em> solution. The solution required knowledge architecture.</p>
+    <p>Before training a model, we reworked our standards. Every component needed a clear purpose. Every recommendation needed a reason. Every strategy needed to be explicit instead of living in experienced Content Designers' heads. We removed documentation that didn't affect writing, clarified decision criteria, expanded guidance to include temporary product messaging, and structured the knowledge so both people and AI could understand it. Only then did we teach it to Copilot.</p>
+
+    <h4>The AI coach</h4>
+    <p>Rather than generating generic copy, the agent acted like an experienced Content Designer sitting beside you. It could:</p>
+    <ul>
+      <li>Rewrite UI content in our voice and tone.</li>
+      <li>Apply component-specific guidance.</li>
+      <li>Respect character limits across dozens of UI patterns.</li>
+      <li>Recommend reusable content instead of creating new variations.</li>
+      <li>Explain why it suggested changes.</li>
+      <li>Coach designers toward stronger communication strategy.</li>
+    </ul>
+    <p>It didn't just edit. It taught. If someone led with a feature instead of customer value, it explained why. If they repeated information in a title and description, it pointed it out. If they emphasized how instead of why, it redirected them.</p>
+    <p>The goal wasn't better prompts. It was better Content Design decisions.</p>
+
+    <h4>Governance still mattered</h4>
+    <p>Not every standard should be easy to bypass. Some patterns deliberately required Content Design judgment. Exclamation points were discouraged because they quickly made the product sound forced or juvenile. "We" shifted attention from users to the company. The AI explained these principles, suggested alternatives, and reinforced when Content Design review was required. It automated consistency—not judgment.</p>
+
+    <h4>Beyond the bot</h4>
+    <p>Once Content Design knowledge became structured, it powered much more than AI. The same work enabled:</p>
+    <ul>
+      <li>Reusable notification architecture across email, SMS, and in-app messaging</li>
+      <li>Shared change management patterns</li>
+      <li>Feature awareness frameworks</li>
+      <li>Reusable promotional messaging</li>
+      <li>Repeatable content schemas used across product experiences</li>
+    </ul>
+    <p>Marketing, Product Ops, researchers, and product designers all worked from the same playbook instead of inventing new approaches for every project.</p>
+
+    <h4>The impact</h4>
+    <p>More than 100 people across UX and partner organizations adopted the AI coach. Product designers—including many working in English as a second language—could confidently create production-ready UI content aligned with Content Design standards. Researchers and partners brought stronger work into review instead of blank pages.</p>
+    <p>Most importantly, the Content Design practice shifted its attention. Instead of spending hours applying standards manually, Content Designers spent more time in design reviews, influencing information architecture, supporting high-complexity work, and designing the next generation of systems for AI. The biggest change wasn't faster writing. It was changing where Content Design expertise created value.</p>
+
+    <h4>More examples</h4>
+    <p>This approach wasn't unique to Content Design. I used the same playbook with other disciplines.</p>
+    <p><strong>Multimedia: Component illustration system.</strong> Built a reusable illustration library that let designers assemble graphics from standardized pieces instead of creating every illustration from scratch.</p>
+    <p><strong>Multimedia: MVP-first production workflow.</strong> Every project started by defining the smallest valuable deliverable before investing in polished production. When priorities shifted and the team was pulled into executive work, stakeholders still received useful deliverables instead of waiting for unfinished work.</p>
     </div>
 
     <p><strong>Principle:</strong> Don't build everything at once. Standards cut decisions; fewer decisions, faster output.</p>
