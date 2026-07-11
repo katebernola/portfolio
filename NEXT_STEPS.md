@@ -3,25 +3,28 @@
 One running list, prioritized by impact. Update in place rather than starting new lists elsewhere.
 **Global rule: anything unfinished or still in doubt goes here.**
 
-## Current state (updated 2026-07-10)
+## Current state (updated 2026-07-11)
 
-Live site: **index.html** (masthead + four-step playbook, continuous scroll) · **team.html** (leadership stats + quotes) · **me.html** (contact + what I'm looking for). Eggplant (#6B4C9A) accent marks case studies.
+Live and pushed: **index.html** (masthead + four-step playbook; steps 1, 2, and 3 now all have inline case studies — Help Center, retirement cross-sell test, AI content design coach) · **team.html** (leadership stats + quotes) · **me.html** (contact + what I'm looking for). Eggplant (#6B4C9A) accent marks case studies. "Content design/designers" lowercased site-wide.
 
-Not linked / not yet public:
-- **retirement-cross-sell.html** — full draft, built at strength. Real numbers approved by Kate. Held until images are added, then link it in (see below). Kept out of every push so far because the repo is public.
-- **use-case-2.html** — **pulled this session** (superseded by the retirement story).
-
-## Shipped this session (the pre-distribution "knock-out" batch)
-
-- Job title: portfolio is already consistent on "Experience design manager" — no portfolio change needed. The **resume** is the outlier ("UX design manager"); reconciliation routed to the resume agent (see prompt).
-- Proofread of the three live pages (Kate is proofreading the resume herself). Fixed "sure-fire" → "surefire."
-- **Pulled use-case-2.html.**
-- **a11y sanity pass — passed.** Eggplant 6.72:1, muted text 7.58:1 (both clear AA/AAA), no heading skips, all SVGs named, all links discernible, resume-link icon `aria-hidden`, reduced-motion guard added to all three pages.
+Not linked / not pushed:
+- **retirement-cross-sell.html** — the full standalone deep-dive (all four artifacts, the beats the Step 2 summary doesn't have room for). Real numbers approved by Kate. Held until images are added and the flagged facts are verified, then link it in.
+- **hire-kate.html** — "KATE! The game show," built and playable, held for Kate's review (see below).
 
 ## Before the resume goes out — remaining
 
 1. **Kate: proofread the printed resume.**
 2. **Resume agent updates** (see the prompt handed off separately): reconcile the title, add deep-links into the portfolio, weave in Heap/Pendo/UMUX, resolve the 2× vs 2.5× number.
+
+## Game show page — awaiting Kate's review before push
+
+`hire-kate.html` is built, playable, verified (game logic, filters, contrast, no overflow at 375/desktop, reduced-motion), and `noindex`'d. Not linked from anywhere, not pushed. Needs:
+- **Approve or rewrite the 3 lie cards** (Round 1: "1M+ views on my top Help Center article"; Round 2: "I'm great at telling jokes"; Round 3: "I've never lost an argument with a sales team").
+- **Confirm the varsity-letters fact stays** (football/rowing, pulled from the resume).
+- **Sign off on the vibe** — gold/purple casino palette, marquee bulbs, tone of the copy.
+- **Feed the deck.** Currently ~10 stat cards vs. ~5 personal cards (3 quirks/facts + 3 quotes + 1 placeholder); 2–3 more quirks/facts would balance it. Quote-campaign results slot in as they arrive.
+- **Decide the link-in.** Plan was a self-aware link from Me ("the unnecessarily dramatic version →"); confirm placement and label.
+- Once approved: push, then link it in.
 
 ## Retirement case study — to finish and ship
 
@@ -32,14 +35,14 @@ Not linked / not yet public:
 
 ## Priority build queue (by impact)
 
-0. **Craft narrative — "How I raise craft" block on My team.** Kate's critique model (heuristics/laws-of-UX diagnosis; designers own the solution) + the receipts already on the page (analyst → UX product designer II, 9 of 12 trained from scratch, the 401(k) flow). One confident line in Kate's voice; draft offered, Kate to approve wording. Mitigates the "no hands-on product design" screen for practice-leadership roles.
+0. **Craft narrative — "How I raise craft" block on My team.** Kate's critique model (heuristics/laws-of-UX diagnosis; designers own the solution) + the receipts already on the page (analyst → UX product designer II, 9 of 12 trained from scratch, the 401(k) flow). Mitigates the "no hands-on product design" screen for practice-leadership roles. **Not yet drafted** — offered, not written; needs an explicit go-ahead.
 0b. **Quote campaign.** Kate asks colleagues for attributed quotes (with permission to link LinkedIn profiles). One specific moment per person, not adjectives. Role → theme map: content designer (teaching content design), direct report (manager), IC (mentor), product partner (partnership), multimedia designer (craft + unblocking), peer (collaboration), **product design lead (design judgment in critique — highest-value quote, get first)**, former designer (unblocking, change management, leveling up). Claude to draft the ask-message template on request.
 0c. **"Why you should hire Kate" fun page.** Deliberate gameshow/casino pastiche: random quote/stat/fact machine + personality + live proof of AI-assisted building. Guardrails agreed: side-door link from Me with self-aware label; one on-page framing line ("built with AI in an afternoon; yes, it's supposed to look like this"); randomizer backed by a scannable full list; strongest quotes ALSO woven into My team. Full-commitment execution (marquee typography, real slot interaction) — no halfway cheese.
 
 1. **Design systems: creation (step 3) + adoption (step 4).** Kate can speak to this directly. Weave the creation story into step 3 and the adoption story (advised across 90 designs / 100+ teams) into step 4. **Top of the list.**
 2. **"How I hire and grow" — the practice-build case study.** Kate's favorite; fills the people-building gap the retirement study leaves. Source: the "How I Did It" doc + the interview-question set handed off this session. Needs a non–Great-Resignation framing for why the team collapsed to one person before it can open.
 3. **Flex Assistant content governance (70% → 90% accuracy).** Kate happy to add. "Content design is the input to AI accuracy" — timely. Needs: what was measured, by whom, and what content change moved the number.
-4. **Step 2 visual.** Before/after UI is unavailable — find an alternative (a simple outcome diagram, or a redrawn "how users think" IA sketch for the retirement estimator).
+4. ~~Step 2 visual~~ — done; the retirement cross-sell case study (with the redrawn left-nav wireframe) now lives inline in Step 2.
 5. **Step 4 principle line** — still missing; breaks the four-step template. Needs one line in Kate's voice.
 6. **Fill step 3 placeholder visuals** — operating model, knowledge architecture, annotated AI conversation, notification architecture.
 
@@ -70,8 +73,10 @@ A small linked index of shorter pieces, so strong-but-off-framework stories have
 ## Open decisions logged
 
 - Retirement: naming (Paychex Flex? the product?) — Flex is already on the resume.
+- **Step 2 framing tension.** "Find surefire wins" fits the 401(k)/payroll wins cleanly but strains against the retirement cross-sell story (a hard-fought judgment call, not an obvious win). Bridged for now with a line inside the case study; a broader reframe toward "Show value" was offered but not decided.
+- **Word echo in Step 2.** "Retirement" now names two different things in the same step (the cross-sell ad and the income estimator). Reads fine; flagged in case Kate wants to reword the estimator bullet to reduce the repetition.
 
 ## Housekeeping
 
 - **Local notes files** (How I Did It, resume drafts, job-search CSV) — gitignored but still in the repo folder; consider moving them elsewhere.
-- **Re-sync next-steps-tracker.html** (gitignored) to this list — it still holds this session's earlier snapshot, not these newest items.
+- **Re-sync next-steps-tracker.html** (gitignored) — it's several sessions behind this file now (predates the retirement case study, the game show page, and the lowercase pass).
