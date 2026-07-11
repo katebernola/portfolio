@@ -500,6 +500,14 @@
     .eq-result { white-space: normal; }
     .eq-group { grid-template-columns: 1fr; }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -664,7 +672,7 @@
       <li>Demand for content design grew across product teams.</li>
     </ul>
 
-    <p><strong>Principle:</strong> Find sure-fire wins. No last-minute patches. "Essential to success," not "superhero work."</p>
+    <p><strong>Principle:</strong> Find surefire wins. No last-minute patches. "Essential to success," not "superhero work."</p>
   </section>
 
   <section id="step-3" class="step">
