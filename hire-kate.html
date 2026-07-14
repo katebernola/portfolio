@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KATE! The game show | Why you should hire Kate Bernola</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314081f'/%3E%3Ctext x='32' y='45' font-size='38' font-weight='700' text-anchor='middle' fill='%23ffd34d' font-family='Arial, sans-serif'%3EK%3C/text%3E%3C/svg%3E">
-<meta name="description" content="KATE-GORIES: a Jeopardy-style game show revealing why you should hire Kate Bernola. Quotes, quirks, facts, and numbers that sound made up. Built with AI.">
+<meta name="description" content="KATE-GORIES! A Jeopardy-style game show revealing why you should hire Kate Bernola. Quotes, quirks, facts, and numbers that sound made up. Built with AI.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="KATE! The game show">
 <meta property="og:description" content="Jeopardy-style game show, daily doubles, phone a friend, and an applause meter. The unnecessarily dramatic version of katebernola.github.io.">
@@ -612,6 +612,11 @@
     padding: 40px 24px;
     text-align: center;
     box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
   }
 
   .lightning-card-display {
@@ -731,7 +736,6 @@
 
   .grid-card {
     background: #1a0b2e;
-    border: 2px solid #4b2a78;
     border-radius: 14px;
     padding: 18px;
     display: flex;
@@ -784,9 +788,14 @@
     font-size: 18px;
     color: #e8d9ff;
     margin-top: 4px;
+    display: none;
   }
 
+  .meter.show { display: block; }
+
   .meter .display { color: var(--gold); font-size: 22px; letter-spacing: 0.1em; }
+
+  .act-sub.hide { display: none; }
 
   /* ---------- Sign-off ---------- */
 
@@ -875,13 +884,13 @@
     <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">Sound: off</button>
   </div>
 
-  <p class="host-line">You've seen <a href="index.html">the serious version</a> — playbooks, ROI math, retention stats. This page is the rest.</p>
+  <p class="host-line">You've seen the <a href="index.html">serious version</a>. This page is the fun stuff.</p>
 
   <!-- ================= ROUND 1: JEOPARDY ================= -->
   <section aria-labelledby="round1-title">
     <div class="act-head">
       <p class="act-kicker">Round one</p>
-      <h2 id="round1-title" class="display">KATE-GORIES</h2>
+      <h2 id="round1-title" class="display">KATE-GORIES!</h2>
       <p class="act-sub">Pick a category, pick a value.</p>
     </div>
 
@@ -910,7 +919,7 @@
           <button class="filter-btn" type="button" data-filter="stat" aria-pressed="true">Quantifiers</button>
           <button class="filter-btn" type="button" data-filter="quirk" aria-pressed="false">Quirks</button>
           <button class="filter-btn" type="button" data-filter="fact" aria-pressed="false">Quiddities</button>
-          <button class="filter-btn" type="button" data-filter="quote" aria-pressed="false">Quotes</button>
+          <button class="filter-btn" type="button" data-filter="quote" aria-pressed="false">Quips</button>
         </div>
 
         <div class="card-grid" id="cardGrid"></div>
@@ -921,7 +930,7 @@
   <!-- ================= SIGN-OFF ================= -->
   <footer class="signoff">
     <p class="big display">That's the show, folks.</p>
-    <p>Built with AI. It started as an afternoon thing. It is now 1 a.m.</p>
+    <p>Built with AI in an afternoon.</p>
     <a class="exit-btn" href="mailto:kdobbertin@gmail.com">Book this contestant</a>
     <p class="boring-link">Back to the <a href="index.html">boring stuff</a></p>
   </footer>
@@ -1061,23 +1070,22 @@
 
   /* The card deck */
   var CARDS = [
-    { cat: "stat",  text: "Nobody has ever resigned while reporting to Kate.", attr: "Not bad for 4 years.", link: "team.html" },
     { cat: "stat",  text: "75% of her content design team was promoted.", attr: "3 of them twice.", link: "team.html" },
     { cat: "stat",  text: "100% of Kate's former reports offered her a reference.", attr: "She didn't even ask.", link: "team.html" },
-    { cat: 'stat',  text: 'Kate trained 9 people how to be content designers.', attr: 'Starting with "content design exists."', link: 'team.html' },
-    { cat: "stat",  text: "Kate designed a cross-sell campaign that generated over half-a-mil in revenue.", attr: "And preserved IA integrity.", link: "index.html#step-2" },
+    { cat: "stat",  text: "Kate hired 9 people with zero prior knowledge, then taught them to be content designers.", attr: "Now they're top-tier talent.", link: 'team.html' },
     { cat: "stat",  text: "Kate helped 500,000 small businesses stay in business during the pandemic.", attr: "It won a Silver Stevie.", link: "me.html" },
-    { cat: "stat",  text: "Her work earned a Brandon Hall Gold for AI for business impact.", attr: "And 7 other awards.", link: "me.html" },
-    { cat: "stat",  text: "She transformed a team of tech writers into designers.", attr: "Using middle school math.", link: "index.html#step-1" },
-    { cat: 'stat',  text: 'Kate taught an AI to coach content design. 100+ people signed up.', attr: 'It never gets tired of saying "sentence case."', link: 'index.html#step-3' },
-    { cat: "stat",  text: "Kate rebuilt a content design practice from 1 person to 12.", attr: "We're BFFs. For real.", link: "team.html" },
+    { cat: 'stat',  text: 'Kate helped over 100 people improve their content design.', attr: 'Via an agent built in CoPilot.', link: 'index.html#step-3' },
+    { cat: "stat",  text: "Kate rebuilt a content design practice from 1 person to 12.", attr: "We're BFFs. Honestly.", link: "team.html" },
 
-    { cat: "quirk", text: "Kate says she's bad at jokes.", attr: "It's definitely her funniest joke." },
-    { cat: "quirk", text: "When Kate gets excited, she's so vociferous Webex mutes her.", attr: "Her team thinks this is hilarious." },
+    { cat: "quirk", text: "Kate's bad at jokes. She'll remind you of this whenever her jokes fall flat.", attr: "It's her funniest joke." },
+    { cat: "quirk", text: "When Kate gets excited, she's so vociferous Webex mutes her.", attr: "It makes her team crack up." },
     { cat: 'quirk', text: 'Kate won "most dramatic" in high school.', attr: "Exhibit A: this site." },
 
-    { cat: "fact",  text: "Kate stood 10 feet from Joe Montana on the sideline of one of the top 25 college football games of all time.", attr: "It was raining." },
-    { cat: "fact",  text: "Kate has varsity letters for football and rowing.", attr: "From Notre Dame." },
+    { cat: "fact",  text: "Kate stood 10 feet from Joe Montana on the sideline of one of the top 25 college football games of all time.", attr: "It was raining, and we lost." },
+    { cat: "fact",  text: "Nobody has ever resigned while reporting to Kate.", attr: "Not bad for 4 years.", link: "team.html" },
+    { cat: "fact",  text: "Her work earned a Brandon Hall Gold for AI for business impact.", attr: "And 7 other awards.", link: "me.html" },
+    { cat: "fact",  text: "Kate transformed two teams: Help Center writing to content design. Video production to multimedia design.", attr: "Using middle school math.", link: "index.html#step-1" },
+
 
     { cat: 'quote', text: '"Kate is a fantastic leader who not only truly cares about the quality of deliverables, but also the people behind the deliverables."', attr: '&mdash; <a href="https://www.linkedin.com/in/bekka-burton/">Bekka</a>' },
     { cat: 'quote', text: '"Kate fostered a supportive and open environment where ideas mattered more than hierarchy."', attr: '&mdash; <a href="https://www.linkedin.com/in/gina-iannitelli/">Gina</a>' },
@@ -1086,7 +1094,7 @@
   ];
 
   var CHIP_CLASS = { stat: 'cat-stat', quirk: 'cat-quirk', fact: 'cat-fact', quote: 'cat-quote' };
-  var CHIP_LABEL = { stat: 'Quantifier', quirk: 'Quirk', fact: 'Quiddity', quote: 'Quote' };
+  var CHIP_LABEL = { stat: 'Quantifier', quirk: 'Quirk', fact: 'Quiddity', quote: 'Quip' };
 
   /* Jeopardy clues. type "mc" = multiple choice; type "open" = answer-in-a-question,
      revealed then self-judged. THE "AI"SLE $200 and $300 are pending Kate’s clues. */
@@ -1098,49 +1106,52 @@
       question: "At Notre Dame, Kate earned a varsity letter for her participation in two sports: rowing, and this other one the university is most famous for.",
       options: ["What is fencing?", "What is football?", "What is volleyball?", "What is basketball?"],
       correct: 1,
-      reveal: "What is football? Kate was a student manager for both organizations and even has a Big East Championship ring to prove it."
+      reveal: "Kate was a student manager for both organizations. She even has a Big East Championship ring to prove it."
     },
     {
       category: "NO BUSINESS BEING TRUE",
       value: 200,
-      type: "open",
-      question: "This three-letter COVID-era program offered forgivable loans based on payroll. When it became the company’s top priority, Kate was tapped to design the flow that turned a mountain of regulations into a clear path for business owners.",
-      answer: "What is PPP?",
-      reveal: "Kate was the sole content designer for the PPP report and Loan Forgiveness Calculator. Her work won multiple awards and helped more than 500,000 small businesses stay in business."
+      type: "mc",
+      question: "This COVID-era program known widely by its 3-letter acronym offered forgivable loans based on payroll. When it became the company’s top priority, Kate designed the flow that turned a mountain of regulations into a clear path for business owners.",
+      options: ["What is the Small Business Administration?", "What is the COVID Relief Fund?", "What is the Pancea for the Pandemic Plan?", "What is the Paycheck Protection Program?"],
+      correct: 3,
+      reveal: "Kate was the sole content designer for the PPP report and Loan Forgiveness Calculator. The team's work won multiple awards and helped more than 500,000 small businesses stay afloat."
     },
     {
       category: "NO BUSINESS BEING TRUE",
       value: 300,
-      type: "open",
-      question: "Kate designed a cross-sell campaign that generated this much revenue — enough to cover a seat on the first commercial spaceflight.",
-      answer: "What is $500,000?",
-      reveal: "Kate blocked sales from rolling out a treatment that broke the system’s Information Architecture, by designing a better one and proving it with an A/B test. Kate’s treatment appeared at the right place and time, appearing to 1/3 of the users but resulting in 2X conversions at the client level."
+      type: "mc",
+      question: "Kate designed a cross-sell campaign that generated this much revenue. It's enough to cover a seat on the first commercial spaceflight.",
+      options: ["What is $50,000?", "What is $100,000?", "What is $500,000?", "What is $1,000,000?"],
+      correct: 2,
+      reveal: "The biggest win wasn't the revenue; it was the user experience snafu she prevented. The original campaign sales started to roll out broke the system's information architecture. Kate designed a safe alternative, then used an A/B test to show it was over twice as effective at meeting the sale goal."
     },
     {
       category: "THE AISLE",
       value: 100,
-      type: "open",
-      question: "Kate built an AI coach that can help with design strategy and little things like reminding people to use this capitalization style everywhere — even when writing the first thing on the page.",
-      answer: "What is sentence case?",
-      reveal: "Sentence case is easier to scan because it follows the way people naturally read and write. It reduces visual noise and creates clearer, more predictable text patterns, which makes content more accessible — especially for people who benefit from that consistency."
+      type: "mc",
+      question: "Kate built an AI coach that can help with design strategy and little things like reminding people to use this capitalization style everywhere (even when you write the first thing on the page).",
+      options: ["What is camelCase?", "What is sentence case?", "WHAT IS ALL CAPS?", "What Is Title Case?"],
+      correct: 1,      
+      reveal: "Sentence case is easier to scan because it matches how people naturally read. By building that rule into the design system, Kate enabled the AI coach to catch one of the most common UI issues automatically. A small detail, but just one of hundreds of design principles the coach could enforce."
     },
     {
       category: "THE AISLE",
       value: 200,
       type: "mc",
-      question: "There are times AI is the right answer, and other times it's not. Which of these did Kate solve primarily with an AI-driven solution?",
-      options: ["What is interpreting government regulations for the Paycheck Protection Program?", "What is stopping a sales-driven cross-sell campaign that broke the app's IA?", "What is coaching more than 100 designers to write better UI content?", "What is running A/B tests on promotional placements?"],
+      question: "AI is powerful, but it's not always the right choice. Identify the use case Kate solved with AI. What is ... ?", 
+      options: ["Interpreting government regulations", "Stopping a promotional initiative that broke the IA", "Coaching 100+ people on UI messaging", "Running A/B tests on promotional language"],
       correct: 2,
-      reveal: "Kate used AI to scale content guidelines and standards, not deterministic work. The other three problems were solved through product design, experimentation, and systems thinking. The AI coach helped more than 100 people make better content decisions, so content designers could focus on deeper-level problems."
+      reveal: "Kate used AI to scale content guidelines and standards, not deterministic work. She solved the other three problems through product design, experimentation, and systems thinking. AI would have added unecessary cost or risk."
     },
     {
       category: "THE AISLE",
       value: 300,
       type: "mc",
-      question: "Kate raised a red flag when she noticed that each team working on Paychex Assistant was creating its own way of organizing information, known as this. Biologists have used this concept for centuries.",
-      options: ["What is a knowledge base?", "What is content management?", "What is information architecture?", "What is taxonomy?"],
+      question: "Kate raised a red flag when she noticed that each team working on Paychex Assistant was creating its own way of organizing information, known as this. Biologists have used the concept for centuries.",
+      options: ["What is a knowledgebase?", "What is content management?", "What is information architecture?", "What is taxonomy?"],
       correct: 3,
-      reveal: "Taxonomy is the system for classifying and organizing information. Because AI thrives on consistency, Kate alerted Product Management of the risk and brought together UX, Product, and Knowledge Management to define a centralized approach in the future."
+      reveal: "Taxonomy is the system for classifying and organizing information. Because AI thrives on consistency, Kate took action when she spotted this disconnect. She alerted UX and Product management of current-state the risk. Then she brought UX, Product, dev, and Knowledge Management together. THey defined a centralized approach to use going forward."
     },
     {
       category: "ALL THINGS EQUAL",
@@ -1150,27 +1161,26 @@
       items: ["Item treasured by beach-combers", "An approach to AI projects Kate brought to her portfolio, where design, dev, and product work as one unit", "The enclosure legumes grow in", "A means of escape from a doomed star destroyer"],
       options: ["What is A?", "What is B?", "What is C?", "What is D?"],
       correct: 0,
-      reveal: "Pea pods, escape pods, and the pod approach — a research-backed method to design and build AI projects, where a cross-functional team works together to define, design, build, and iterate from day 1."
+      reveal: "Pea pods, escape pods, and the pod approach: a research-backed method to design and build AI projects, where a cross-functional team works together to define, design, build, and iterate from day 1."
     },
     {
       category: "ALL THINGS EQUAL",
       value: 200,
       type: "mc",
-      question: "Three of these have the same answer. Find the one that doesn’t fit.",
-      items: ["The turnover rate on Kate’s team", "Jack’s dog in The Nightmare Before Christmas", "The year that marks the start of the Common Era", "The value of a blank Scrabble tile"],
-      options: ["What is A?", "What is B?", "What is C?", "What is D?"],
+      question: "Three of these have the same answer. Find the one that doesn’t fit. What is ... ?",
+      options: ["The turnover rate on Kate’s team", "Jack’s dog in The Nightmare Before Christmas?", "The year that marks the start of the Common Era?", "The value of a blank Scrabble tile"],
       correct: 2,
-      reveal: "Technically, there is no year 0. But it’s true that over her 4 years as a manager, no one who reported to Kate has ever resigned or accepted a role on another team."
+      reveal: "Technically, there is no year 0. But it’s true that over her for years as a manager, no one has ever resigned or accepted another role while reporting to Kate."
     },
     {
       category: "ALL THINGS EQUAL",
       value: 300,
       type: "mc",
-      question: "Three of these have the same level of accuracy. Find the one that doesn’t fit.",
+      question: "Three of these have the same level of accuracy. Find the one that doesn’t fit. What is ... ?",
       items: ["Passes by future NFL Hall of Famer Josh Allen", "Tomorrow’s weather forecast", "The Paychex Flex assistant, on topics Kate helped train and test", "Voice assistant speech recognition"],
       options: ["What is A?", "What is B?", "What is C?", "What is D?"],
       correct: 0,
-      reveal: "Josh Allen’s completion percentage topped out just under 70%. But Kate raised the threshold for chatbot accuracy from 70% to 90%, matching a 24-hour forecast and ChatGPT’s ability to transcribe what you say. Go Bills!"
+      reveal: "Josh Allen’s completion percentage topped out just under 70%. But Kate raised the threshold for chatbot accuracy from 70% to 90%, matching it to what's expected from a 24-hour forecast and ChatGPT voice-to-text transcripts. Go Bills!"
     }
   ];
 
@@ -1275,6 +1285,12 @@
       boardState[currentQuestionIndex].used = true;
       if (currentTile) currentTile.disabled = true;
       boardResolved++;
+      // On first answer, show meter and hide "Pick a category" text
+      if (boardResolved === 1) {
+        var actSub = document.querySelector('.act-sub');
+        if (actSub) actSub.classList.add('hide');
+        boardMeter.classList.add('show');
+      }
     }
   }
 
@@ -1440,10 +1456,12 @@
   }
 
   function dealLightningCard() {
+    // Filter out "Your quote could be here" from main display
+    var playableDeck = CARDS.filter(function(c) { return c.text !== 'Your quote could be here.'; });
     var i;
-    do { i = Math.floor(Math.random() * CARDS.length); } while (i === lastLightningCardIndex && CARDS.length > 1);
+    do { i = Math.floor(Math.random() * playableDeck.length); } while (i === lastLightningCardIndex && playableDeck.length > 1);
     lastLightningCardIndex = i;
-    lightningDisplay.innerHTML = '<div class="grid-card lightning-single">' + cardMarkup(CARDS[i]) + '</div>';
+    lightningDisplay.innerHTML = '<div class="grid-card lightning-single">' + cardMarkup(playableDeck[i]) + '</div>';
     showReaction('lightning');
     playSound('thunder');
   }
