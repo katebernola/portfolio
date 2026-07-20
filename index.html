@@ -240,14 +240,13 @@
   }
 
   .two-col-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    column-count: 2;
     column-gap: 32px;
-    row-gap: 4px;
   }
 
   .two-col-list li {
-    margin-bottom: 0;
+    margin-bottom: 4px;
+    break-inside: avoid;
   }
 
   .visual-figure {
@@ -528,7 +527,7 @@
     .eq-row { grid-template-columns: 1fr; gap: 4px; }
     .eq-result { white-space: normal; }
     .eq-group { grid-template-columns: 1fr; }
-    .two-col-list { grid-template-columns: 1fr; row-gap: 0; }
+    .two-col-list { column-count: 1; }
   }
 
   @media (prefers-reduced-motion: reduce) {
