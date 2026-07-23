@@ -113,9 +113,11 @@
   <text x="540" y="712" font-size="11" font-weight="700" fill="#1e293b" text-anchor="middle">Design execution</text>
 
   <!-- ===== Usability testing ===== -->
-  <rect x="545" y="758" width="100" height="48" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
-  <text x="595" y="779" font-size="10" font-weight="600" fill="#1e293b" text-anchor="middle">Usability</text>
-  <text x="595" y="793" font-size="10" font-weight="600" fill="#1e293b" text-anchor="middle">testing</text>
+  <rect x="609" y="748" width="100" height="68" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="659" cy="768" r="4" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M653,778 a6 6 0 0 1 12,0" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="659" y="798" font-size="10" font-weight="600" fill="#1e293b" text-anchor="middle">Usability</text>
+  <text x="659" y="812" font-size="10" font-weight="600" fill="#1e293b" text-anchor="middle">testing</text>
 
   <!-- ===== Decision: P.O. decides what ships ===== -->
   <path d="M720,655 L778,688 L720,721 L662,688 Z" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
